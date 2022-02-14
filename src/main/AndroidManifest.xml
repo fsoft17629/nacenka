@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.fsoft.sa.nacenka">
+
+    <uses-permission android:name="ru.evotor.permission.receipt.printExtra.SET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="app_uuid"
+            android:value="983d9bb2-c5c7-497b-8b8d-217d67fffe85"/>
+
+        <service
+            android:name=".AppService"
+            android:enabled="true"
+            android:exported="true"
+            android:icon="@mipmap/add_price"
+            android:label="Нац. на чек">
+
+            <meta-data
+                android:name="ru.evotor.sales_screen.BACKGROUND_COLOR"
+                android:value="#133788" />
+
+            <intent-filter android:priority="20">
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="evo.v2.receipt.sell.printExtra.REQUIRED" />
+                <action android:name="evo.v2.receipt.sell.receiptDiscount" />
+            </intent-filter>
+
+
+        </service>
+
+        <activity
+            android:name=".NacenkaActivity"
+            android:label="@string/title_activity_nacenka" />
+        <activity android:name=".ExcActivity">
+            android:label="@string/exception_title"
+            android:theme="@style/Theme.Transparent";
+        </activity>
+    </application>
+
+</manifest>

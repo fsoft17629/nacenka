@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">App PriceUp</string>
+    <string name="warn">Внимание</string>
+    <string name="exception_title">Что-то пошло не так...</string>
+    <string name="title_activity_nacenka">Введите процент наценки:</string>
+    <string name="over_time">С открытия смены прошло 12 часов, закройте смену, откройте новую для продолжения продаж</string>
+    <string name="understand">Понятно</string>
+    <string name="title_activity_main1">MainActivity1</string>
+</resources>
